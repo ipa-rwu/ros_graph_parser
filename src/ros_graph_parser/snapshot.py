@@ -77,7 +77,7 @@ def create_ros_graph_snapshot():
             if not check_black_list(serv, BLACK_LIST_SERV):
                 continue
             if n in nodes_name:
-                node.services.add(rg.Interface(serv, services_dict[serv]))
+                node.service_servers.add(rg.Interface(serv, services_dict[serv]))
 
         node.check_actions()
         nodes.append(node)
